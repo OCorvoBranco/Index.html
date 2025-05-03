@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Corvo Branco: O curso definitivo para homens que se recusam a ser comuns. Torne-se o homem inabalável que você nasceu para ser.">
+  <title>Corvo Branco – Homem de Guerra!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #d4af37; /* Gold */
+      --secondary: #b8860b; /* Dark Goldenrod */
+      --accent: #8b0000; /* Dark Red */
+      --dark: #121212;
+      --darker: #0a0a0a;
+      --light: #f8f8f8;
+      --gray: #444;
+      --light-gray: #ddd;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--darker);
+      color: var(--light);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.8;
+      font-weight: 400;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styles */
+    header {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                  url('https://images.app.goo.gl/nJ9zrHaa67Qh1Aav7') no-repeat center center/cover;
+      height: 100vh;
+      min-height: 700px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      padding: 0 20px;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 75% 30%, transparent 0%, var(--darker) 70%);
+      z-index: 1;
+    }
+
+    .header-content {
+      max-width: 800px;
+      z-index: 2;
+      position: relative;
+    }
+
+    .header-content h1 {
+      font-size: 4rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      line-height: 1.2;
+      position: relative;
+    }
+
+    .header-content h1::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: var(--primary);
+      animation: expandLine 1.5s ease-out forwards;
+    }
+
+    .header-content p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      color: var(--light);
+      font-weight: 500;
+    }
+
+    .warning-box {
+      background-color: rgba(139, 0, 0, 0.7);
+      border-left: 4px solid var(--primary);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .warning-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+
+    .warning-box:hover::before {
+      transform: translateX(100%);
+    }
+
+    .warning-box p {
+      font-size: 1.1rem;
+      font-weight: 600;
+      position: relative;
+    }
+
+    /* Button Styles */
+    .btn {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--darker);
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--secondary), var(--primary));
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    }
+
+    .btn:hover::after {
+      opacity: 1;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      margin-left: 1rem;
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: var(--darker);
+    }
+
+    /* Pulse Animation for CTA */
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+      70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+    }
+
+    .btn-pulse {
+      animation: pulse 2s infinite;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 6rem 0;
+      position: relative;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-title h2 {
+      font-size: 2.8rem;
+      color: var(--primary);
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title h2:after {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 3px;
+      background: var(--primary);
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: expandLine 1s ease-out forwards;
+    }
+
+    .section-dark {
+      background-color: var(--dark);
+    }
+
+    .section-accent {
+      background: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)), 
+                  url('https://images.app.goo.gl/nJ9zrHaa67Qh1Aav7') no-repeat center center/cover;
+      background-attachment: fixed;
+    }
+
+    /* Content Boxes */
+    .content-box {
+      background-color: rgba(18, 18, 18, 0.8);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 8px;
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .content-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), transparent);
+      z-index: -1;
+    }
+
+    .content-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      border-color: var(--primary);
+    }
+
+    .content-box h3 {
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .content-box h3::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+    .content-box:hover h3::after {
+      width: 100px;
+    }
+
+    .content-box p {
+      margin-bottom: 1rem;
+    }
+
+    .highlight {
+      color: var(--primary);
+      font-weight: 600;
+      position: relative;
+      display: inline-block;
+    }
+
+    .highlight::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--primary);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+
+    .highlight:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    /* Grid Layout */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    /* List Styles */
+    .feature-list {
+      list-style-type: none;
+    }
+
+    .feature-list li {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-list li:hover {
+      transform: translateX(5px);
+    }
+
+    .feature-list li:before {
+      content: '\f00c';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      color: var(--primary);
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-list li:hover:before {
+      transform: scale(1.2);
+    }
+
+    /* Testimonial Styles */
+    .testimonial {
+      background-color: var(--dark);
+      border-left: 4px solid var(--primary);
+      padding: 2rem;
+      margin: 2rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonial::before {
+      content: '\201C';
+      font-family: 'Playfair Display', serif;
+      font-size: 8rem;
+      color: rgba(212, 175, 55, 0.1);
+      position: absolute;
+      top: -2rem;
+      left: 1rem;
+      line-height: 1;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .testimonial-author {
+      font-weight: 700;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+    }
+
+    .testimonial-author::before {
+      content: '';
+      display: inline-block;
+      width: 30px;
+      height: 2px;
+      background: var(--primary);
+      margin-right: 10px;
+    }
+
+    /* Video Section */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      margin: 3rem 0;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      transform: perspective(1000px) rotateX(5deg);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .video-container:hover {
+      transform: perspective(1000px) rotateX(0deg);
+      box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Pricing Section */
+    .pricing-box {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(10, 10, 10, 0.9));
+      border: 2px solid var(--primary);
+      border-radius: 8px;
+      padding: 3rem;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pricing-box::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        to bottom right,
+        transparent 0%,
+        transparent 45%,
+        rgba(212, 175, 55, 0.1) 50%,
+        transparent 55%,
+        transparent 100%
+      );
+      transform: rotate(30deg);
+      animation: shine 3s infinite;
+    }
+
+    .price {
+      font-size: 3.5rem;
+      color: var(--primary);
+      font-weight: 700;
+      margin: 1rem 0;
+      position: relative;
+      display: inline-block;
+    }
+
+    .price::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), transparent);
+    }
+
+    .price small {
+      font-size: 1rem;
+      color: var(--light-gray);
+    }
+
+    /* FAQ Section */
+    .faq-item {
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      background-color: rgba(212, 175, 55, 0.1);
+      padding: 1.5rem;
+      cursor: pointer;
+      font-weight: 600;
+      position: relative;
+      border-left: 3px solid var(--primary);
+      transition: all 0.3s ease;
+    }
+
+    .faq-question:hover {
+      background-color: rgba(212, 175, 55, 0.2);
+    }
+
+    .faq-question:after {
+      content: '\f078';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      right: 1.5rem;
+      top: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .faq-question.active {
+      background-color: rgba(212, 175, 55, 0.2);
+    }
+
+    .faq-question.active:after {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      padding: 0;
+      background-color: rgba(18, 18, 18, 0.8);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, padding 0.5s ease;
+    }
+
+    .faq-question.active + .faq-answer {
+      padding: 1.5rem;
+      max-height: 500px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000;
+      padding: 3rem 0;
+      text-align: center;
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--light-gray);
+      margin: 0 1rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .footer-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    .footer-links a:hover::after {
+      width: 100%;
+    }
+
+    .social-links {
+      margin-bottom: 2rem;
+    }
+
+    .social-links a {
+      color: var(--light);
+      background-color: var(--gray);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background-color: var(--primary);
+      color: var(--dark);
+      transform: translateY(-3px) scale(1.1);
+    }
+
+    .copyright {
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    /* Seções ocultas */
+    .secao {
+      background-color: var(--dark);
+      padding: 2rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+      border-left: 4px solid var(--primary);
+      display: none;
+      animation: fadeIn 0.5s ease-out;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes expandLine {
+      from { width: 0; }
+      to { width: 100px; }
+    }
+
+    @keyframes shine {
+      to {
+        transform: translateX(100%) rotate(30deg);
+      }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+    .delay-4 { animation-delay: 0.8s; }
+
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .header-content h1 {
+        font-size: 3rem;
+      }
+      
+      .header-content p {
+        font-size: 1.2rem;
+      }
+      
+      .section-title h2 {
+        font-size: 2.2rem;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 4rem 0;
+      }
+      
+      .header-content h1 {
+        font-size: 2.5rem;
+      }
+      
+      .btn {
+        padding: 0.8rem 1.8rem;
+        font-size: 1rem;
+      }
+      
+      .content-box {
+        padding: 1.8rem;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-links a {
+        margin: 0.5rem 0;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .header-content h1 {
+        font-size: 2rem;
+      }
+      
+      .section-title h2 {
+        font-size: 1.8rem;
+      }
+      
+      .price {
+        font-size: 2.5rem;
+      }
+
+      .warning-box {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <header>
+    <div class="header-content fade-in">
+      <h1>CORVO BRANCO: <span class="float-animation" style="display: block;">FUGINDO DA EXTINÇÃO.</span></h1>
+      <p>O ebook que o sistema não quer que você estude. Homens fracos constroem tempos frágeis. seja a diferença nessa geração!</p>
+      
+      <div class="warning-box fade-in delay-1">
+        <p><i class="fas fa-exclamation-triangle"></i> <strong>AVISO:</strong> Se você não está disposto a encarar a verdade sobre si mesmo, feche esta página agora. O livro foi feito para aqueles que estão dispostos a mudarem modo de pensar e agir.</p>
+      </div>
+      
+      <div class="fade-in delay-2">
+        <p>Este não é um livro para homens fracos, para meninos que se escondem atrás de desculpas ou para aqueles que acreditam que a vida deve ser fácil.</p>
+        <a href="#offer" class="btn btn-pulse">EU QUERO SER UM CORVO BRANCO</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Intro Section -->
+  <section class="section-dark">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>ESTE É UM CHAMADO À GUERRA</h2>
+      </div>
+      
+      <div class="content-box fade-in delay-1">
+        <p>Uma guerra contra a mediocridade, contra a fraqueza, contra a covardia que infectou a masculinidade moderna. Você está pronto para lutar?</p>
+        <p>O <span class="highlight">Corvo Branco</span> não é um conjunto de frases motivacionais. <strong>É um manual de sobrevivência para homens que se recusam a ser comuns.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section>
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>O COLAPSO DA MASCULINIDADE</h2>
+      </div>
+      
+      <div class="content-box fade-in delay-1">
+        <p>Você já percebeu que os homens de hoje estão mais fracos do que nunca?</p>
+        
+        <ul class="feature-list">
+          <li><strong>Homens sem direção</strong>, sem honra, sem propósito.</li>
+          <li><strong>Homens que fogem da responsabilidade</strong> e se escondem atrás de vícios e distrações.</li>
+          <li><strong>Homens que não sabem liderar</strong>, não sabem proteger e muito menos sabem construir.</li>
+        </ul>
+        
+        <p class="mt-3"><strong>Isso não é um acidente. É uma decadência planejada.</strong></p>
+        <p>E se você não agir agora, você será apenas mais um nome na lista dos derrotados.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section-dark">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>O QUE VOCÊ VAI APRENDER AQUI?</h2>
+      </div>
+      
+      <div class="grid">
+        <div class="content-box fade-in delay-1">
+          <h3>A FORJA DO CARÁTER</h3>
+          <p>Você aprenderá o que significa ser um homem de verdade. Honra, disciplina, sacrifício. Não há atalhos.</p>
+        </div>
+        
+        <div class="content-box fade-in delay-2">
+          <h3>DOMÍNIO SOBRE SI MESMO</h3>
+          <p>Pare de ser escravo dos seus impulsos. Controle sua mente, seu corpo e suas emoções antes que eles destruam você.</p>
+        </div>
+        
+        <div class="content-box fade-in delay-1">
+          <h3>COMBATE INTELECTUAL</h3>
+          <p>O mundo está cheio de mentiras. Aprenda a pensar, a argumentar e a se defender. Ignorância é uma escolha.</p>
+        </div>
+        
+        <div class="content-box fade-in delay-2">
+          <h3>LIDERANÇA E PODER</h3>
+          <p>Seja o homem que sua família precisa, não o peso que elas carregam.</p>
+        </div>
+        
+        <div clasMENcontent-box fade-in delay-1">
+          <h3>A MENTE DA GUERRA</h3>
+          <p>A vida é um campo de batalha. Antecipe crises, domine conflitos e nunca seja pego desprevenido.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curriculum Section -->
+  <section class="section-accent">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>CONTEÚDO PROFUNDO. REAL. CRUELMENTE HONESTO.</h2>
+      </div>
+      
+      <div class="content-box fade-in delay-1">
+        <h3>O QUE VOCÊ VAI DOMINAR:</h3>
+        <ul class="feature-list">
+          <li><strong>CAPÍTULO I</strong> – O CAOS DO MUNDO E A DESORDEM DO HOMEM.</li>
+          <li><strong>CAPÍTULO II</strong> – O FORNO DA CONSTRUÇÃO MASCULINA.</li>
+          <li><strong>CAPITULO III</strong> - O DOMÍNIO PRÓPRIO.</li>
+          <li><strong>CAPITULO IV</strong> – FUNDAMENTOS PARA O COMBATE INTELECTUAL.</li>
+          <li><strong>CAPÍTULO V</strong> – O HOMEM E O LAR</li>
+          <li><strong>CAPÍTULO VI</strong> – O LEGADO DO HOMEM</li>
+          <li><strong>CAPÍTULO VII</strong> – CORVO BRANCO: FUGINDO DA EXTINÇÃO.</li>
+          <li><strong>CAPÍTULO VIII</strong> – A MENTE DA GUERRA.</li>
+          <li><strong>CAPÍTULO IX</strong> – FORÇA BRUTA E SILÊNCIO: O CÓDIGO DO CORVO BRANCO.</li>
+          <li><strong>CAPÍTULO X</strong> – O IMIMIGO INVISÍVEL: A ENGENHARIA DA DECADÊNCIA.</li>
+          <li><strong>CAPÍTULO XI</strong> – A RESSURREIÇÃO DO ARQUÉTIPO.</li>
+          <li><strong>CAPÍTULO XII</strong> – O MANIFESTO DO CORVO BRANCO.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="section-dark">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>ASSISTA ANTES DE DECIDIR</h2>
+      </div>
+      
+      <div class="video-container fade-in delay-1">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/placeholder" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      
+      <div class="content-box fade-in delay-2 text-center">
+        <p>Você vive na geração mais fraca da história. Uma geração que tem medo da verdade, que se orgulha da sua covardia e chama fraqueza de sensibilidade. Vocês trocaram a coragem por likes, a honra por conforto, e a liderança por lacração. Cercados de almofadas, entregaram a espada e junto com ela a alma. São barulhentos demais para serem sábios e frágeis demais para serem livres.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section>
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>SAIBA QUE</h2>
+      </div>
+      
+      <div class="testimonial fade-in delay-1">
+        <p class="testimonial-text">"O homem moderno não ama, mas busca refúgio no amor; não espera, mas busca refúgio na esperança; não acredita mas busca refúgio em um dogma."</p>
+        <p class="testimonial-author">- Jordan B. Peterson.</p>
+      </div>
+      
+      <div class="testimonial fade-in delay-2">
+        <p class="testimonial-text">"A mediocridade, no Brasil, é mais do que o objeto de adoração, é objeto de culto. o sujeito que não percebe a própria mediocridade não tem competência nem para ser medíocre."</p>
+        <p class="testimonial-author">- Olavo de Carvalho</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offer Section -->
+  <section id="offer" class="section-dark">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>DECIDA AGORA!</h2>
+      </div>
+      
+      <div class="pricing-box fade-in delay-1">
+        <h3>INVESTIMENTO</h3>
+        <div class="price">R$20 <small>à vista</small></div>
+        <p>Porque o preço não deve ser sua desculpa.</p>
+        <p>20 reais é menos do que você gasta em uma semana com café, cerveja ou besteiras que não trazem nenhum retorno.</p>
+        <p>Se você não está disposto a investir <strong>o valor de um lanche</strong> no seu próprio futuro, então você já aceitou a derrota.</p>
+        <a href="https://hotmart.com/..." class="btn btn-pulse mt-3">QUERO ME TORNAR UM CORVO BRANCO</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section>
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>QUEM DEVE COMPRAR ESTE CURSO?</h2>
+      </div>
+      
+      <div class="content-box fade-in delay-1">
+        <ul class="feature-list">
+          <li>Homens que estão cansados de viver na sombra da própria fraqueza.</li>
+          <li>Homens que sabem que podem ser mais, mas não sabem por onde começar.</li>
+          <li>Homens que estão prontos para encarar a verdade, por mais dura que seja.</li>
+        </ul>
+        
+        <p class="mt-3"><strong>Se você não se encaixa nisso, saia agora.</strong></p>
+      </div>
+      
+      <div class="section-title fade-in">
+        <h2>O QUE VOCÊ PERDE SE NÃO AGIR?</h2>
+      </div>
+      
+      <div class="content-box fade-in delay-2">
+        <ul class="feature-list">
+          <li>Mais um ano sendo controlado por vícios e procrastinação.</li>
+          <li>Mais uma chance desperdiçada de se tornar o homem que você deveria ser.</li>
+          <li>Mais uma geração crescendo sem um exemplo real de masculinidade.</li>
+        </ul>
+        
+        <p class="mt-3"><strong>O tempo não volta. E o mundo não perdoa.</strong></p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="content-section">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>PERGUNTAS FREQUENTES</h2>
+      </div>
+      
+      <div class="faq-item fade-in delay-1">
+        <div class="faq-question">
+          Quanto tempo leva para ver resultados?
+        </div>
+        <div class="faq-answer">
+          <p>Os primeiros resultados podem ser percebidos imediatamente após aplicar os primeiros princípios. No entanto, a transformação completa só depende do seu comprometimento.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item fade-in delay-2">
+        <div class="faq-question">
+          Por quanto tempo terei acesso ao ebook?
+        </div>
+        <div class="faq-answer">
+          <p>O acesso é vitalício.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item fade-in delay-3">
+        <div class="faq-question">
+          Existe garantia?
+        </div>
+        <div class="faq-answer">
+          <p>Sim, oferecemos 7 dias de garantia incondicional. Se você não gostar do curso por qualquer motivo, basta solicitar o reembolso.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section-accent">
+    <div class="container text-center fade-in">
+      <h2 class="mb-3">ESTE NÃO É UM EBOOK QUALQUER. <span style="display: block;">É UM DIVISOR DE ÁGUAS PARA A SUA VIDA.</span></h2>
+      <p class="mb-4">O mundo precisa de Homens fortes. Sua família precisa de você. O momento de agir é agora. Ou você age hoje, ou amanhã será tarde demais.</p>
+      <a href="https://hotmart.com/..." class="btn btn-pulse">ADQUIRA O CORVO BRANCO AGORA – 20 R$</a>
+    </div>
+  </section>
+
+  <!-- Final Warning -->
+  <section class="section-dark">
+    <div class="container text-center fade-in">
+      <div class="warning-box">
+        <p><strong>ÚLTIMO AVISO:</strong> Se você ainda acredita que pode continuar vivendo como sempre viveu e que, de alguma forma, as coisas vão melhorar sozinhas, <strong>este curso não é para você</strong>.</p>
+        <p class="mt-2">Mas se você está cansado de ser fraco, se você está pronto para encarar a verdade e se tornar um homem inabalável...</p>
+        <p class="mt-2"><strong>Então esta é a sua hora.</strong></p>
+      </div>
+      <p class="mt-4">O Corvo Branco não espera. <strong>E você também não deveria.</strong></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="#" onclick="mostrarSecao('termos')">Termos de Uso</a>
+      <a href="#" onclick="mostrarSecao('privacidade')">Política de Privacidade</a>
+      <a href="#" onclick="mostrarSecao('contato')">Contato</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Seções ocultas -->
+<div id="termos" class="secao" style="display: none; padding: 20px;">
+  <h2>Termos de Uso</h2>
+  <p>Aqui estão os seus Termos de Uso. Adicione o conteúdo completo conforme necessário.</p>
+</div>
+
+<div id="privacidade" class="secao" style="display: none; padding: 20px;">
+  <h2>Política de Privacidade</h2>
+  <p>Aqui está sua Política de Privacidade. Insira os dados de privacidade do seu site.</p>
+</div>
+
+<div id="contato" class="secao" style="display: none; padding: 20px;">
+  <h2>Contato</h2>
+  <p>Coloque aqui seu e-mail, telefone ou um formulário de contato.</p>
+</div>
+
+<!-- Script para exibir seções -->
+<script>
+function mostrarSecao(secaoId) {
+  // Oculta todas as seções
+  document.querySelectorAll('.secao').forEach(secao => {
+    secao.style.display = 'none';
+  });
+
+  // Exibe a seção clicada
+  const secaoSelecionada = document.getElementById(secaoId);
+  if (secaoSelecionada) {
+    secaoSelecionada.style.display = 'block';
+    secaoSelecionada.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+</script>
+      
+      <p class="copyright">© 2025 Corvo Branco. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple animation trigger
+    document.addEventListener('DOMContentLoaded', function() {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      
+      const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      fadeElements.forEach(el => {
+        el.style.opacity = 0;
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        fadeObserver.observe(el);
+      });
+      
+      // FAQ functionality
+      const faqQuestions = document.querySelectorAll('.faq-question');
+      faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+          const answer = question.nextElementSibling;
+          question.classList.toggle('active');
+          
+          if (answer.style.display === 'block') {
+            answer.style.display = 'none';
+          } else {
+            answer.style.display = 'block';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
